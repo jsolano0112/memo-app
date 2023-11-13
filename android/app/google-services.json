@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "522578454092",
+    "project_id": "memoapp-53ece",
+    "storage_bucket": "memoapp-53ece.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522578454092:android:f8fc4b5395a59ec577b6e9",
+        "android_client_info": {
+          "package_name": "com.memoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522578454092-ams9r2jekupipo4uv7j4im22vmanu4g9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.memoapp",
+            "certificate_hash": "8d79fe5bf85f6ea4524e8a2c7edc7a4dadb81fa5"
+          }
+        },
+        {
+          "client_id": "522578454092-rrnnt44i5ogn3sd98r7frc70ui3lso9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiBLO-ZlB9wdEOz8ZeAG1i9bdukv0XfPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522578454092-rrnnt44i5ogn3sd98r7frc70ui3lso9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

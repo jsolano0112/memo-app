@@ -1,27 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SignInGoogle from './views/SignInGoogle';
+import Home from './views/Home';
+import VinculateFriend from './views/VinculateFriend';
+const Stack = createNativeStackNavigator();
 
-function App() {
+function App(): JSX.Element {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View>
-          <Text>Hello</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="VinculateFriend">
+        <Stack.Screen name="SignIn" component={SignInGoogle} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="VinculateFriend" component={VinculateFriend} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-
-});
-
 export default App;
