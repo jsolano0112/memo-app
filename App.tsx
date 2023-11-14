@@ -5,17 +5,19 @@ import SignInGoogle from './views/SignInGoogle';
 import Home from './views/Home';
 import VinculateFriend from './views/VinculateFriend';
 import StatusControlScreen from './views/StatusControlScreen';
+import RegisterMedicationScreen from './views/RegisterMedicationScreen';
 
 const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="VinculateFriend">
+      <Stack.Navigator initialRouteName="RegisterMedicationScreen">
         <Stack.Screen name="SignIn" component={SignInGoogle} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="VinculateFriend" component={VinculateFriend} />
         <Stack.Screen name="StatusControlScreen" component={StatusControlScreen} />
+        <Stack.Screen name="RegisterMedicationScreen" component={RegisterMedicationScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
