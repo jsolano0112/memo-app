@@ -26,7 +26,7 @@ function VinculateFriend() {
         <Text style={styles.title}>¿Deseas vincular a un compañero?</Text>
       </View>
       <View style={styles.containerTwo}>
-        <Text>Términos y condiciones</Text>
+        <Text style={{color:'blue'}}>Términos y condiciones</Text>
         <Text>Ingresa el correo de tu compañero</Text>
         <InputComponent
           name="correo"
