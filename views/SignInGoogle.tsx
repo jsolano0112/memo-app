@@ -1,5 +1,12 @@
 import React from 'react';
-import {Button, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Button,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 import {useNavigation} from '@react-navigation/native';
@@ -12,11 +19,11 @@ function SignInGoogle() {
   });
   const signInWithGoogleAsync = async () => {
     try {
-      //   const {idToken} = await GoogleSignin.signIn();
-      //   const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      //   const userSignIn = await auth().signInWithCredential(googleCredential);
+        // const {idToken} = await GoogleSignin.signIn();
+        // const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+        // const userSignIn = await auth().signInWithCredential(googleCredential);
 
-      //   console.log('Usuario autenticado:', userSignIn.user);
+        // console.log('Usuario autenticado:', userSignIn.user);
       navigation.navigate('Home');
     } catch (error) {
       console.error('Error al iniciar sesión con Google:', error);
@@ -28,8 +35,12 @@ function SignInGoogle() {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#91D4CF',
+        backgroundColor: 'white',
       }}>
+      <Image
+        source={require('../styles/assets/MEMO.png')}
+        style={styles.image}
+      />
       <TouchableOpacity style={styles.button} onPress={signInWithGoogleAsync}>
         <Text style={styles.title}> Sign In with Google</Text>
         <Image
@@ -46,13 +57,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#4285F4',
+    backgroundColor: '#91D4CF',
     padding: 10,
     borderRadius: 5,
   },
   buttonImage: {
-    width: 70, 
-    height: 30, 
+    width: 70,
+    height: 30,
     resizeMode: 'contain',
   },
   title: {
@@ -60,6 +71,10 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginVertical: 17,
+  },
+  image: {
+    width: 300,
+    height: 300,
   },
 });
 
