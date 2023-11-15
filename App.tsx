@@ -12,7 +12,9 @@ const Stack = createNativeStackNavigator();
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignIn">
+      <Stack.Navigator
+        initialRouteName="SignIn"
+        screenOptions={{headerShown: false}}>
         <Stack.Screen name="SignIn" component={SignInGoogle} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="VinculateFriend" component={VinculateFriend} />
