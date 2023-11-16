@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen, toggleSidebar, selectedItem, onSelectItem }) => {
         toggleSidebar(); 
     };
     return (
-        <View style={{ flexDirection: 'column', position: 'absolute', left: isOpen ? 0 : -200, width: 200, height: '100%', backgroundColor: '#f0f0f0', padding: 20 }}>
+        <View style={{ flexDirection: 'column', position: 'absolute', left: isOpen ? 0 : -200, width: 200, height: '100%', backgroundColor: '#f0f0f0', padding: 20, zIndex:99 }}>
             <TouchableOpacity onPress={toggleSidebar}>
                 <Text style={{ fontSize: 20, marginBottom: 20, color: 'blue' }}>
                     ☰
