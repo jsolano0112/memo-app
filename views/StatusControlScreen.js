@@ -11,7 +11,7 @@ import {
 import React from 'react';
 import SelectDropdown from 'react-native-select-dropdown';
 import ButtonComponent from '../components/ButtonComponent';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const StatusControlScreen = () => {
   const navigation = useNavigation();
@@ -114,7 +114,7 @@ const StatusControlScreen = () => {
                 margin: 10,
               }}>
               <Text style={style.text}>{option}</Text>
-              <Text style={{fontSize: 40, textAlign: 'center', color: 'black'}}>
+              <Text style={{ fontSize: 40, textAlign: 'center', color: 'black' }}>
                 {index == 0 ? 'Si' : 'No'}
               </Text>
             </TouchableOpacity>
@@ -189,7 +189,7 @@ const StatusControlScreen = () => {
                 margin: 10,
               }}>
               <Text style={style.text}>{option}</Text>
-              <Text style={{fontSize: 40, textAlign: 'center', color: 'black'}}>
+              <Text style={{ fontSize: 40, textAlign: 'center', color: 'black' }}>
                 {index == 0 ? 'Si' : 'No'}
               </Text>
             </TouchableOpacity>
@@ -237,7 +237,7 @@ const StatusControlScreen = () => {
                 margin: 10,
               }}>
               <Text style={style.text}>{option}</Text>
-              <Text style={{fontSize: 40, textAlign: 'center', color: 'black'}}>
+              <Text style={{ fontSize: 40, textAlign: 'center', color: 'black' }}>
                 {index == 0 ? 'Si' : 'No'}
               </Text>
             </TouchableOpacity>
@@ -284,14 +284,14 @@ const StatusControlScreen = () => {
             numberOfLines={5}
             //underlineColorAndroid='transparent'
             placeholder="Cuentanos..."
-            //onChangeText={(text)=>this.setState({text})}
-            //value={this.state.text}
+          //onChangeText={(text)=>this.setState({text})}
+          //value={this.state.text}
           />
         </View>
         {/* End Question Nine */}
 
         <View style={style.group}>
-        {/* 
+          {/* 
           <Button
             style={{padding: 10, margin: 15}}
             onPress={console.log('ᓚᘏᗢ')}
@@ -300,7 +300,7 @@ const StatusControlScreen = () => {
           />
         */}
 
-          <ButtonComponent text="Enviar" onPress={()=>{navigation.navigate('Home')}}/>
+          <ButtonComponent text="Enviar" />
 
         </View>
       </View>

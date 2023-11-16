@@ -5,13 +5,25 @@ import {
   ScrollView,
   TextInput,
   Pressable,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import ButtonComponent from '../components/ButtonComponent';
 import InputComponent from '../components/InputComponent';
 import SelectDropdown from 'react-native-select-dropdown';
+import useSideBar from '../hooks/use-sidebar';
+import Sidebar from '../components/Sidebar';
+import { useNavigation } from '@react-navigation/native';
 
 const RegisterMedicationScreen = () => {
+  const navigation = useNavigation()
+  const {
+    handleSideBarNavigation,
+    handleSidebarToggle,
+    isSideBarOpen,
+    selectedNavigationItem,
+  } = useSideBar();
+
   const optionsTipoMed = [
     'Comprimido',
     'Cápsula',
@@ -37,6 +49,17 @@ const RegisterMedicationScreen = () => {
 
   return (
     <ScrollView>
+      <Sidebar
+        isOpen={isSideBarOpen}
+        toggleSidebar={handleSidebarToggle}
+        selectedItem={selectedNavigationItem}
+        onSelectItem={handleSideBarNavigation}
+      />
+      <TouchableOpacity
+        style={style.toggleButton}
+        onPress={handleSidebarToggle}>
+        <Text style={style.buttonText}>☰</Text>
+      </TouchableOpacity>
       <View style={style.container}>
         <Text
           style={{
@@ -128,11 +151,12 @@ const RegisterMedicationScreen = () => {
 
         <View style={style.group}>
           <Pressable
-            style={[style.containerPressable, {backgroundColor: '#00A897'}]}>
+            onPress={() => navigation.navigate('Calendar')}
+            style={[style.containerPressable, { backgroundColor: '#00A897' }]}>
             <Text style={style.textPressable}>Guardar</Text>
           </Pressable>
           <Pressable
-            style={[style.containerPressable, {backgroundColor: '#00A897'}]}>
+            style={[style.containerPressable, { backgroundColor: '#00A897' }]}>
             <Text style={style.textPressable}>Cancelar</Text>
           </Pressable>
         </View>
@@ -198,7 +222,7 @@ const style = StyleSheet.create({
     borderColor: '#00A897',
     marginRight: 20,
   },
-  dropdown1BtnTxtStyle: {color: 'grey', textAlign: 'center'},
+  dropdown1BtnTxtStyle: { color: 'grey', textAlign: 'center' },
   containerPressable: {
     backgroundColor: '#B9C0D5',
     width: '45%',
@@ -210,6 +234,17 @@ const style = StyleSheet.create({
   textPressable: {
     fontWeight: 'bold',
     color: 'black',
+  },
+  toggleButton: {
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: '#161924',
+    fontSize: 20,
+    fontWeight: '500',
   },
 });
 export default RegisterMedicationScreen;

@@ -6,6 +6,7 @@ import Home from './views/Home';
 import VinculateFriend from './views/VinculateFriend';
 import StatusControlScreen from './views/StatusControlScreen';
 import RegisterMedicationScreen from './views/RegisterMedicationScreen';
+import CalendarScreen from './views/Calendar';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ function App(): JSX.Element {
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="SignIn" component={SignInGoogle} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Calendar" component={CalendarScreen} />
         <Stack.Screen name="VinculateFriend" component={VinculateFriend} />
         <Stack.Screen name="StatusControlScreen" component={StatusControlScreen} />
         <Stack.Screen name="RegisterMedicationScreen" component={RegisterMedicationScreen}/>
